@@ -1,0 +1,3 @@
+Try using grep to search for the security breaches in the stormtrooper-report-log file:
+
+	grep "SECURITY-BREACH" stormtrooper-report-log

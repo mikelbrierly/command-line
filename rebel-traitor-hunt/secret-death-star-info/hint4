@@ -1,0 +1,5 @@
+To find all the Salacius' addresses, use the 'imperial-personnel' file:
+
+	grep "Salacius" imperial-personnel
+
+Notice that not all of the results are worth investigating.  Remember what we know about Salacius.

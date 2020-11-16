@@ -1,0 +1,23 @@
+There has been a disturbance in the force.
+
+Someone aboard this Death Star has been infiltrating our files and slandering the Emperor Himself.
+
+Most of the slander includes words like BANTHA_POODOO, PRUNE_FACE, CANT_BELIEVE, and MY_GRANDMA.
+
+You are in charge of finding the Rebel, when you do, bring him to me...
+
+- Lord Vader
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, navigate into the directory secret-death-star-info
+
+Luckily, a stormtrooper before you has marked all of the places that the rebel infiltrated with the word SECURITY-BREACH in the file stormtrooper-report-log. There you should find information to lead you in the right direction...
+
+If you get stuck, open one of the hint files (from the CL, type 'cat hint1', 'cat hint2', etc.).
+
+To check your answer or find out the solution, open the file 'solution' (from the CL, type 'cat solution').
+
+To get started on how to use the command line, open command-line-manual.md (from the command line, you can type 'less command-line-manual.md'. Remember to see more of the file, hit 'enter', and to exit, hit 'q').
+
+Don't use a text editor to view any files except these instructions, the command-line-manual, and hints.

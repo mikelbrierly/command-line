@@ -1,0 +1,5 @@
+Checking Your Answer:
+
+  Copy and paste the following command, replace Traitor with the suspected traitor's name you want to check, and execute it from inside the rebel-traitor-hunt directory:
+
+  echo "Traitor" | $(command -v md5 || command -v md5sum) | grep -qif .5dmtcerroc && echo "$(cat .5dmrewsna)" || echo "$(cat .5dmgnorw)"

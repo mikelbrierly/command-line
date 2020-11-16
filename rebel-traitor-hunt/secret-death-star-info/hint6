@@ -1,0 +1,9 @@
+To find a matching TK ID#, or a matching description, you can use grep on the 'armor-info' file:
+
+	grep "Kamino" armor-info 
+
+	grep "Heavily Damaged" armor-info
+
+	grep "113" armor-info
+
+This doesn't give us anything useful - why not? Try using 'head' on the file to investigate its structure.
