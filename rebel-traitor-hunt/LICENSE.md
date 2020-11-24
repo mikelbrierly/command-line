@@ -1,12 +1,10 @@
-*Disclaimer: "rebel-traitor-hunt" is a variation of the "the-command-line-murders" written by Noah Veltman*
+*Disclaimer: "rebel-traitor-hunt" is a variation of "the-command-line-murders" written by Noah Veltman*
 
-*http://noahveltman.com*
-
-
+*https://github.com/veltman*
 
 *All ASCII art is a variation of "Death Star (1)" by Row*
 
-*http://www.ascii-art.de/ascii/s/starwars.txt*
+*ascii-art.de/ascii/s/starwars.txt*
 
 ---
 

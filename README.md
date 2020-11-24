@@ -1,119 +1,314 @@
-# Imperial Command Line Training
+# Introduction to the Command Line
 
-![alt text](http://img.lum.dolimg.com/v1/images/Darth-Vader_6bda9114.jpeg?region=0%2C23%2C1400%2C785&width=768)
+![A computer terminal being used by an Imperial Officer from Star Wars](https://motherboard-images.vice.com/content-images/contentimage/33251/1462385247931989.png)
 
-### A Little History
+> This guide will go through what the the command line interface (`CLI`) is, why we need it, and how we're going to use it! 
 
-Alright troopers! Today we're learning about the command line. What is it, why we need it, and how we're going to use it. The command line is also known as the Terminal, CLI, Command Prompt, Shell, etc. I'll mostly be referring to it as the Terminal and the Command Line.
+---
 
-Before the introduction of the graphical user interface, the only way to interact with your computer was through the Terminal. The earliest terminals (dating back to the mid 1960's) literally printed their output to a roll of paper as they interacted with the computer program. If you really want a blast from the galactic past, go look up [
-punched-card data processing](https://en.wikipedia.org/wiki/Punched_card) (I heard Darth Plagueis used one way back in the day) Today the command line is still the preferred way to interact with computers for advanced users. It gives you much more control and power over your operating system.
+You'll often hear the `command line` referred to in different ways:
 
-### Command Line Basics
+`terminal`
+`CLI`
+`command prompt`
+`shell`
 
-Alright, Let's get into it. Go ahead and open the terminal. A good shortcut for this is CMD + SPACE to pull up spotlight, and then type "terminal" and hit enter.
+Here we'll refer to it as the `terminal` and `CLI` (command line interface).
 
-      CMD + SPACE
+---
 
-Here we can see which user is currently logged in, the name of the computer, and where you are in your computer right now. You should see a little squiggly line indicating where you are.  
+## A Little Background
 
-      ~
+![An image of an old punch card machine](https://i.stack.imgur.com/voqT3.jpg)
 
-(if you don't, type "cd" and hit enter)   
-That little squiggle is called a tilde, and it indicates that you are at your home directory. What's my home directory you say? Lets find out! Type "ls" and hit enter.
+Before the introduction of the graphical user interface (screens with a mouse pointer), the only way to interact with your computer was through the `terminal`. The earliest terminals (dating back to the mid 1960's) literally punched out the user's program (hand-written and then transcribed) onto to a card. Check out [punched-card data processing](https://en.wikipedia.org/wiki/Punched_card). The terminal has evolved exponentially since then, but it is still text-based, and it is still the most efficient way to communicate with our machines.
 
-      ls
+---
 
-This command "lists" all the items in your current directory. (you can think of directories as folders). You should see some directories that look fairly familiar, such as Applications, Desktop, Documents, Twilek_Dancers, Photos, and more. To get into one of these directories, we can use the "cd" command.
+## CLI Basics
 
-      cd
+Alright, Let's get into it. Go ahead and open the terminal. A good shortcut for this is `cmd + space` to pull up the Mac spotlight, and then type "terminal" and hit enter.
 
-"cd" stands for "change directory". If we wanted to enter the "Documents" directory, we would simply type `cd Documents`. Notice that our current location has changed to "~/Documents". Let's run "ls" and see what's inside! Probably a bunch of documents. But what if we wanted to go back and see what's in Desktop instead? To navigate back, type "cd ..".
+![Screenshot of the terminal listing our current location as "~"](https://i.imgur.com/U3CIEw1.png)
+> _As a sandtrooper I'm naturally on Tatooine_
 
-      cd ..
+In your terminal, you'll see some information; which user is currently logged in, the name of the computer, and where you are in your computer right now. (there might be some slight variation, and this output is configurable). You should see a little squiggly line toward the end.  
 
-".." indicates going back one directory. "." indicates where you are.
+```shell
+~
+```
 
-    ..
+_(if you don't, type `cd` and hit enter)_
 
-    .
+That little squiggle is called a `tilde`, and it indicates that you are at your home directory (_you'll see it on the key above `tab` on your keyboard_). 
 
-I like to remember it by the twin suns of Tatooine (a BACKwater planet), and the single Death Star (right where we ARE).
-Make sure you put a space between "cd" and ".." or it will yell at you. Now that took us back to the "Home Directory", right where we were before. (if you want to jump to the home directory from any location, just type "cd" by itself). Now let's make a file of our own! Type "touch bantha_poodoo.txt".
+> What's my home directory you say? Lets find out! 
 
-      touch bantha_poodoo.txt
+Type `ls` and hit enter.
 
-That may sound gross, but it's better than tasting it I'll tell you that much. When you are creating your file, make sure that your filename has no spaces in it, as the command line will interpret "bantha" and "poodoo" as two separate commands if there is a space. I think our file needs a better place to live, rather than exposed out in the cold hoth-like conditions of the home directory. Let's create a new directory for it to live in. Type "mkdir jedi".
+```shell
+ls
+```
 
-      mkdir jedi
+This command "lists" all the items in your current `directory`. (you can think of directories as folders). You should see some directories that look fairly familiar, such as Applications, Desktop, Documents, and Photos. To get into one of these directories, we can use the `cd` command.
 
-"mkdir" stands for "make directory" (at least that one is straightforward). Let's run "ls" again to see our new directory. But what's this! The bantha_poodoo still needs to be put in the directory "jedi". To do this, type "mv bantha_poodoo.txt jedi"
+```shell
+cd
+```
 
-      mv bantha_poodoo.txt jedi
+`cd` stands for "change directory". Let's get into the "Documents" directory.
 
-"mv" takes two parameters, the first one is the item to be moved, and the second is the directory it is to be moved to. Now we can see what our Jedi is full of by changing directories into jedi, and then listing what's inside.
+```shell
+cd Documents 
+```
 
-    cd jedi
+Notice that our current directory has changed to `~/Documents`. 
 
-    ls
+![Screen Shot of the terminal listing our current location as "~/Documents"](https://i.imgur.com/nDeauCk.png)
 
-Is there anything else you can think of that Jedi are full of? Let's add them in!
+Let's "list" what's inside.
 
-    touch sour_blue_milk.txt
+```shell
+ls
+```
 
-    touch mynock_spit.txt
+Probably some directories (folders), and files, each will be displayed differently. Directories are usually indicated by a color of some sort, and files are usually plain. 
 
-now when we type "ls", we see that our "jedi" directory is full of sour_blue_milk, mynock_spit, and bantha_poodoo! Let's add a *directory* now. We'll call it "brain".
+But for now, let's go back to the Desktop directory. To navigate back, type `cd ..`
 
-      mkdir brain
+```shell
+cd ..
+```
 
-when we "cd" into this directory and list what's inside, we see it's empty, that's perfect! It's a very accurate Jedi model we've created. Let's make one last directory inside "brain" for good measure.
+`..` indicates going back one directory. _A single `.` indicates right here where you are_
 
-      mkdir medulla
+```shell
+..
+```
+```shell
+.
+```
 
-"cd" into "medulla" (also empty). Now if we want to go back two directories to "jedi", we can chain our "cd" commands into one! Type "cd ../../"
+---
 
-      cd ../../
+![Luke Skywalker looking at the horizon at dusk of the desert planet Tatooine. Two suns are setting in the desolate landscape](https://i.imgur.com/Tyf5DEP.jpg)
+> I like to remember it by the twin suns of Tatooine, a BACKwater planet.
 
-This will take us back as many times as you type "../". To check where you ended up, you can type "pwd".
+---
 
-      pwd
+Make sure you put a space between `cd` and `..` or the terminal will yell at you. 
 
-This command stands for "print working directory", and it shows you where you currently are. We should be in the "jedi" directory with some empty text files. Let's add something to bantha_poodo.txt by typing "open bantha_poodo.txt".
+Now that took us back to the home directory `~`, right where we were before. (if you want to jump to the home directory from any location, just type `cd` by itself). 
 
-      open bantha_poodo.txt
+Now let's make a file of our own! Type `touch jedi-scum.txt`.
 
-We'll type in a common trait of Bantha Poodoo to our file: "Smelly". Now we can save and close the text editor that popped up. (If we wanted to read what's in our file without having to open up the text editor, we can type "cat bantha_poodoo.txt").
+```shell
+touch luke-skywalker.txt
+```
 
-      cat bantha_poodoo.txt
+> `touch` is a command used to create files! You have a lot of power with `touch`, because you can add any extension you like to files you create, such power!
 
-This will show us the contents of a file right inside the terminal itself. Keep in mind this command is most useful for shorter files that are only a few lines long. (cat stands for concatenate, which means "link (things) together in a chain or series") Make of it what you will.
+_When you are creating your file, make sure that your filename has no spaces in it, as the command line will interpret "luke" and "skywalker" as two separate commands if there is a space._
 
-But I have a feeling that we are a little short on bantha_poodoo... if we wanted to duplicate this file, we can type "cp bantha_poodoo.txt bantha_poodoo2.txt"
+---
 
-      cp bantha_poodoo.txt bantha_poodoo2.txt
+![Luke Skywalker laying in the snow of Hoth, nearly dead.](https://i.ytimg.com/vi/PIGeIdrS-d8/maxresdefault.jpg)
 
-This "copy" command takes two parameters, the first is the file to be copied, and the second is what you want to call the copied file (it can't have the same name as the original). Now when we type "ls", we see our second bantha_poodoo is there! And if we run "cat" on the file, we see that the contents of the original file were also copied. bantha_poodoo is a perfect file to live in our jedi directory, but mynock_spit just doesn't feel descriptive enough... I think we should rename our "mynock_spit" file to "sleemo" (huttese for slimeball). To do this, we will use the "move" command. It definitely doesn't make sense, but it's just the way it is. Type "mv mynock_spit.txt sleemo.txt".
+I think our file needs a better place to live, rather than exposed out in the hoth-like conditions of the home directory. Let's create a _new_ directory for our file to live in. Type `mkdir tauntaun`.
 
-      mv mynock_spit.txt sleemo.txt
+```shell
+mkdir tauntaun
+```
 
-If the second parameter of the "mv" command is NOT a directory, it will rename the item to whatever you typed for the second parameter. If the second parameter is a file that already exists, it will yell at you. Now lets take a step back and admire our jedi directory by typing "ls". ...I think we made a mistake earlier... do you see it? Jedi's don't have brains at all! We should definitely remove it. To do this, we'll type "rm -r brain".
+`mkdir` stands for "make directory". Let's run `ls` again to list our new directory.
 
-      rm -r brain
+![Screen Shot of terminal after running the "ls" command, showing the file "luke-skywalker.txt" and the directory "tauntaun"](https://i.imgur.com/Ds0mKE0.png)
 
-"rm" stands for remove, but the -r is a little confusing. The "-" indicates a flag, and the "r" stands for "recursively". We'll get more into recursion when we talk about Jawascript, but for now, you can think of the "-r" as a way to manipulate directories when a command without the "-r" won't work. For example, running "rm brain" will tell you "rm: brain: is a directory". So we need to use the "-r" *flag*. While we're on the topic of flags and removing files, I should probably mention to you that the command line is like Jabba the Hutt. No second chances, No forgiveness. If you tell it to do something, it'll do it, no questions asked, no undo's. So if we want the command line to be a little more forgiving, we can use the "interactive" flag, "-i".
+Luke is looking a little _chilly_ though, so let's help him out and put him _inside_ the tauntan.
 
-      -i
+![Han Solo cutting open a tauntaun with a lightsaber](https://img.buzzfeed.com/buzzfeed-static/static/2017-12/8/19/asset/buzzfeed-prod-fastlane-02/anigif_sub-buzz-13450-1512778264-6.gif?output-quality=auto&output-format=auto&downsize=360:*)
 
-This will make the command line interactively ask us if we want to perform destructive actions. Let's try it out. Make a new directory called "test", and then type "rm -i -r test".
+```shell
+mv luke-skywalker.txt tauntaun
+```
 
-      rm -i -r test
+`mv` takes two `operands` (parameters), the first one is the item to be moved, and the second is the `directory` it is to be moved to.
 
-It should ask you some questions, and you can simply reply "y" or "n" to tell it to continue or cancel the operation. Man. Look at all the stuff you know now. Speaking of "man", If you want to learn more about any specific command, you can simply type "man" before the command, and you'll get a very thorough explanation of what it can do. For example, if you wanted to learn more about the "mkdir" command, you would type "man mkdir"
+Let's run `ls` again to see what changed.
 
-      man mkdir
+![Screen Shot of terminal after running the "ls" command, showing the directory "tauntaun"](https://i.imgur.com/6YGsNzk.png)
 
-To exit out of the man page, just hit "q".
+`luke-skywalker.txt` is gone, which is expected, but let's check and make sure he's _inside_ the `tauntaun` directory.
 
-That's it for command line basics!    
-Good work troopers, and we'll see you next time for "the command line strikes back"! Hail Vader!
+---
+
+```shell
+cd tauntaun
+```
+```shell
+ls
+```
+Now you should see `luke-skywalker.txt` inside there!!
+
+![Toy figure of tauntaun with luke skywalker inside](https://2warpstoneptune.files.wordpress.com/2015/03/esb-tauntaun-1980-1.jpg)
+
+Is there anything else you can think of that Tauntauns are full of? Let's add them in!
+
+```shell
+touch guts.txt
+```
+```shell
+touch bad-smells.txt
+```
+
+![Screen Shot of running the command "touch guts.txt" inside the tauntaun directory](https://i.imgur.com/tmV5L4P.png)
+> When we run this command, it creates that file _inside_ the tauntaun directory because our current location _is inside of it_.
+
+now when we type `ls`, we see that our "tauntaun" directory is full of guts, bad smells, and Luke Skywalker! 
+
+![Screen Shot of tauntaun directory with the files "bad-smells.txt", "guts.txt", and "luke-skywalker.txt"](https://i.imgur.com/ayrzn8x.png)
+
+Let's make a *directory* now. We'll call it "stomach".
+
+```shell
+mkdir stomach
+```
+
+Now enter that directory with the `cd` command
+
+```shell
+cd stomach
+```
+
+Inside the stomach, let's make another file, this time with a different file extension just to mix it up.
+
+```shell
+touch hoth-hog.html
+```
+
+Let's run `ls` and make sure everything is where we want it to be.
+
+![Screen Shot of the file hoth-hog.html inside ~/hoth/tauntaun/stomach](https://i.imgur.com/togz4nn.png)
+
+Looks good!
+
+---
+
+At this point, we are _inside_ the stomach of the tauntaun. but what if we wanted to go back __multiple__ directories?
+
+We can do that with the by chaining our `..` operand. To go back two directories, we would say
+
+```shell
+cd ../../
+```
+
+> This will take us out of the `stomach` directory, and _also_ out of the `tauntaun` directory. (A single `../` would have just taken us out of the `stomach` directory.)
+
+![Han Solo saying "Ah! I thought they smelled bad on the outside!" After stuffing Luke Skywalker inside the guts of his dead Tauntaun](https://64.media.tumblr.com/7d9bdd2d4a983d0fd9e7e7e074d0263f/tumblr_nss88fitrs1s27326o8_r1_250.gif)
+
+---
+
+## More useful CLI commands
+
+### Print working directory (where you currently are)
+
+```shell
+pwd
+```
+
+`pwd` allows you to check where you are currently located in your system.
+
+It stands for "print working directory", and it shows you where you currently are. It will print out the `path` of where you are all the way back to the _base_ directory (`/`).
+
+---
+
+### Print file contents
+
+```shell
+cat
+```
+
+`cat` shows us the contents of a file right inside the terminal itself. Keep in mind this command is most useful for shorter files that are only a few lines long. (cat stands for concatenate, which means "link (things) together in a chain or series").
+
+Here's an example of what the `cat` command prints out for a small html file.
+
+![Screenshot of output from cat command, a small html file printed to the terminal after running the "cat" command](https://i.imgur.com/shjJczG.png)
+
+---
+
+### Copy
+
+```shell
+cp
+```
+
+`copy` takes two parameters, the first is the file to be copied, and the second is what you want to call the copied file (_it can't have the same name as the original_). 
+
+ex: `cp file1.txt file1-copy.txt` - this will create a copy of `file1.txt` named `file1-copy.txt` in the same directory you are currently in.
+
+---
+
+### Delete (remove)
+
+For files:
+```shell
+rm
+```
+
+For directories:
+```shell
+rm -r
+```
+
+`rm` stands for remove, but the `-r` can be a little confusing. The `-` indicates a flag, and the `r` stands for "recursively". We'll get more into recursion later, but for now, you can think of `-r` as a __way to manipulate directories when a command without `-r` won't work__.
+
+For example, running `rm tauntaun` will tell you `rm: brain: is a directory`. So we need to use the `-r` *flag*. 
+
+> _Quick note on deleting and modifying files: When you give CLI commands, there is usually no confirmation and no "undo's". If we want the command line to be a little more forgiving, we can use the "interactive" flag, "-i"._
+
+---
+
+### Interactive (confirm commands)
+
+```shell
+-i
+```
+
+`-i` will make the command line interactively ask us if we want to perform destructive actions.
+
+```shell
+rm -i -r hoth-hog.html
+```
+
+Using the `-i` flag will force you to confirm certain actions, and you can simply reply `y` or `n` to continue or cancel the operation.
+
+---
+
+### Manual (help pages)
+
+```shell
+man
+```
+
+`man` stands for manual, and is used in conjunction with other commands. If you want to learn more about any specific command, you can simply type `man` before it, and you'll get a very thorough explanation of what it can do. For example, if you wanted to learn more about the `mkdir` command, you would type `man mkdir`.
+
+```shell
+man mkdir
+```
+
+To __exit__ the man page, hit `q`.
+
+---
+
+### Homework
+
+![Darth Vader cutting down rebels with his lightsaber in the hallway of a rebel ship.](https://thumbs.gfycat.com/InsidiousRecentFlies-small.gif)
+
+* `clone` this repo down to your local machine.
+* Navigate to the newly cloned `directory` using the terminal.
+* `cd` into the `rebel-traitor-hunt` directory 
+* Use the `cat` command to read the contents of the file `instructions-from-vader` to get started!
+
+---
+
+> _If you want to learn more about the command line, or find more commands, MDN has a wealth of information, and goes into a lot of detail explaining what you can accomplish with this tool. [For more reading, this is a good starting point.](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)_
