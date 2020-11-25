@@ -210,6 +210,12 @@ cd ../../
 
 ## Useful CLI commands
 
+### TODO pipe
+### TODO grep (-A, -C, -B)
+### TODO less
+### TODO head
+### TODO -n flag
+
 ### Print working directory (where you currently are)
 
 ```shell
