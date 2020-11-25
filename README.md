@@ -19,9 +19,9 @@ Here we'll refer to it as the `terminal` and `CLI` (command line interface).
 
 ## A Little Background
 
-![An image of an old punch card machine](https://i.stack.imgur.com/voqT3.jpg)
+<img src="https://i.stack.imgur.com/voqT3.jpg" alt="An image of an old punch card machine" width="500px">
 
-Before the introduction of the graphical user interface (screens with a mouse pointer), the only way to interact with your computer was through the `terminal`. The earliest terminals (dating back to the mid 1960's) literally punched out the user's program (hand-written and then transcribed) onto to a card. Check out [punched-card data processing](https://en.wikipedia.org/wiki/Punched_card). The terminal has evolved exponentially since then, but it is still text-based, and it is still the most efficient way to communicate with our machines.
+Before the introduction of the graphical user interface (screens with a mouse pointer), the only way to interact with your computer was through the `terminal`. [The earliest terminals](https://en.wikipedia.org/wiki/Punched_card) (dating back to the mid 1960's) literally punched out the user's program (hand-written and then transcribed) onto to a card. The terminal has evolved exponentially since then, but it is still text-based, and it is still the most efficient way to communicate with our machines.
 
 ---
 
@@ -202,13 +202,13 @@ We can do that with the by chaining our `..` operand. To go back two directories
 cd ../../
 ```
 
-> This will take us out of the `stomach` directory, and _also_ out of the `tauntaun` directory. (A single `../` would have just taken us out of the `stomach` directory.)
+> This will take us out of the `stomach` directory, and _also_ out of the `tauntaun` directory. (_A single `../` would have just taken us out of the `stomach` directory._)
 
 ![Han Solo saying "Ah! I thought they smelled bad on the outside!" After stuffing Luke Skywalker inside the guts of his dead Tauntaun](https://64.media.tumblr.com/7d9bdd2d4a983d0fd9e7e7e074d0263f/tumblr_nss88fitrs1s27326o8_r1_250.gif)
 
 ---
 
-## More useful CLI commands
+## Useful CLI commands
 
 ### Print working directory (where you currently are)
 
@@ -262,7 +262,7 @@ rm -r
 
 `rm` stands for remove, but the `-r` can be a little confusing. The `-` indicates a flag, and the `r` stands for "recursively". We'll get more into recursion later, but for now, you can think of `-r` as a __way to manipulate directories when a command without `-r` won't work__.
 
-For example, running `rm tauntaun` will tell you `rm: brain: is a directory`. So we need to use the `-r` *flag*. 
+For example, running `rm tauntaun` will tell you `rm: tauntaun: is a directory`. So we need to use the `-r` *flag*. 
 
 > _Quick note on deleting and modifying files: When you give CLI commands, there is usually no confirmation and no "undo's". If we want the command line to be a little more forgiving, we can use the "interactive" flag, "-i"._
 

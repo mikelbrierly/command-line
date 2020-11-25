@@ -1,11 +1,11 @@
 To see who was a member of several different groups, you can combine their membership lists into one and search against that (make sure you are in the "memberships" directory).
 
-	cat Aim_Like_A_Stormtrooper_101 Blue_Milkaholics_Anonymous Furries_Of_The_Empire Imperial_Checkers_Club | grep "Darth Vader"
+	cat Aim_Like_A_Stormtrooper_101 Blue_Milkaholics_Anonymous Ewotic_Ewoks Imperial_Checkers_Club | grep "suspect_name"
 
 If you only want to see the number of matches, you can use grep's -c option (the c must be lowercase):
 
-	cat Aim_Like_A_Stormtrooper_101 Blue_Milkaholics_Anonymous Furries_Of_The_Empire Imperial_Checkers_Club | grep -c "Darth Vader"
+	cat Aim_Like_A_Stormtrooper_101 Blue_Milkaholics_Anonymous Ewotic_Ewoks Imperial_Checkers_Club | grep -c "suspect_name"
 
 Or you can pipe the result to 'wc -l':
 
-	cat Aim_Like_A_Stormtrooper_101 Blue_Milkaholics_Anonymous Furries_Of_The_Empire Imperial_Checkers_Club | grep "Darth Vader" | wc -l
+	cat Aim_Like_A_Stormtrooper_101 Blue_Milkaholics_Anonymous Ewotic_Ewoks Imperial_Checkers_Club | grep "suspect_name" | wc -l

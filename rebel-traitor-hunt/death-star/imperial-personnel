@@ -1,9 +1,28 @@
 ***************
-To go to the barracks a trooper lives on, use the file
-for that barracks name in the 'barracks' subdirectory.
-To enter their quarters and investigate, read the line number
-they live on from the file.  If a line looks like bantha-poodoo, you're at the wrong barracks.
 ***************
+
+To visit a troopers barracks:
+
+Look up their BARRACKS_LOCATION in the 'barracks' subdirectory.
+
+---------------
+
+To enter their quarters and investigate:
+
+Print the line number they live on from their barracks file.
+
+---------------
+
+Ex:
+
+Alexsandr Kallus	M	36	Lothal Barracks, line 318
+
+Line 318 of "barracks/Lothal" 
+is where you would find information on Alexsandr Kallus.
+
+***************
+***************
+
 
 ALIAS	  GENDER	   AGE	   BARRACKS_LOCATION
 ********************************************
@@ -1873,7 +1892,7 @@ Carli Kajuga	F	52	WoodBarracks Barracks, line 108
 Xiaojun Lee	M	78	Lena Barracks, line 483
 Dana Zagame	F	16	Myrtle Barracks, line 367
 Barbara Bruno	F	74	Chickatawbut Barracks, line 174
-Russell Aidietyte	M	78	Glendale Barracks, line 318
+Alexsandr Kallus	M	36	Lothal Barracks, line 318
 Marcin Dyen	M	34	Alvan Barracks, line 203
 Tatyana Charlos	F	80	Hautevale Barracks, line 383
 Linda Njitam	F	34	Mendum Barracks, line 197

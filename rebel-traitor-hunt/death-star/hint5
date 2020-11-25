@@ -1,6 +1,5 @@
 "Contact" the two troopers with possible intel by reading the correct line from the barracks they live on:
 
-	head -n 40 barracks/Plasteel | tail -n 1
+	cat -n barracks/Plasteel | grep 40
 
-This will give you just line 173 of the Plasteel barracks, because it will take first 40 lines, and then take
-the last line from those.
+This will give you results including the line number 40.
