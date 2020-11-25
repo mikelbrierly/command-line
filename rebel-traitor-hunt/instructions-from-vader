@@ -14,6 +14,6 @@ Luckily, a stormtrooper before you has marked all of the places that the traitor
 
 If you get stuck, open one of the hint files. (from the CL, type 'cat hint1', 'cat hint2', etc.)
 
-To check your answer or find out the solution, open the file 'solution' (from the CL, type 'cat solution').
+To check your answer or find out the solution, type 'cat contact_vader'.
 
 Don't use a text editor to view any files except these instructions.
