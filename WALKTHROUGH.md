@@ -235,8 +235,3 @@
 ![An imperial officer walks in to deliver news to Darth Vader](https://64.media.tumblr.com/tumblr_m6gn0ikWJO1r2pn76o2_500.gif)
 
 Open `contact_vader` and follow the instructions in that file.
-
-
-
-
-

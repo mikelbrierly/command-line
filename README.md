@@ -210,12 +210,6 @@ cd ../../
 
 ## Useful CLI commands
 
-### TODO pipe
-### TODO grep (-A, -C, -B)
-### TODO less
-### TODO head
-### TODO -n flag
-
 ### Print working directory (where you currently are)
 
 ```shell
@@ -239,6 +233,86 @@ cat
 Here's an example of what the `cat` command prints out for a small html file.
 
 ![Screenshot of output from cat command, a small html file printed to the terminal after running the "cat" command](https://i.imgur.com/shjJczG.png)
+
+---
+
+### Search
+
+```shell
+grep
+```
+
+The `grep` command searches any given input, selecting lines that match, and printing out what did match! Let's look at a simple example:
+
+```shell
+echo "I am a test string I created just now" | grep "created"
+```
+![Screen Shot of a string saying "I am a test string I created just now" | grep "created", and then an output from the terminal with the word "created" highlighted.](https://i.imgur.com/FnuA8mm.png)
+_you can ignore `echo`, it simply outputs your input. It "echoes" what you type and is useful for examples._
+
+See how grep highlighted our search criteria?
+
+To fully understand how this is working, see `pipe` (`|`) in the next example and give it a go yourself.
+
+---
+
+### Pipe output
+
+```shell
+|
+```
+
+By using `pipe` (`|`), you can take the _output_ of any command, and pass it into another command. 
+
+There are many things this could be used for, but a common one you can focus on now is using it in conjunction with `grep` to search for things. If you wanted to search the contents of a file, you could output it's contents using `cat`, and then search with `grep` using a pipe. 
+
+> `name-list.txt` is a simple list of names. We can output them using the `cat` command
+
+![Screen Shot of a list of names after running the "cat name-list.txt" command](https://i.imgur.com/HkshsST.png)
+
+Now if we take that output and __pipe__ it _to_ `grep`, we can search it's output.
+
+```shell
+cat name-list.txt | grep "Han Solo"
+```
+![Screen Shot of the command cat name-list.txt | grep "Han Solo". The output shows only the line with Han Solo's name on it.](https://i.imgur.com/3ofQ1mL.png)
+
+`grep` only gives output if it finds a match for what you passed it! In this case, it gave us the line with our search criteria: `Han Solo`.
+
+_If we wanted to see lines __around__ our match, we could use a `flag` of `-C`:_
+```shell
+cat name-list.txt | grep "Ahsoka Tano" -C 2
+```
+![Screen Shot of the use of the -C flag at the end of our grep search to see lines above and below our results.](https://i.imgur.com/0zv0rAC.png)
+See our highlighted result? But it __also__ gave us 2 lines above and below when we used the `-C` flag. 
+
+> `-C` gives lines before and after match
+> `-B` gives lines before match
+> `-A` gives lines after match
+
+_Remember that `|` can be used with __anything__ that gives output. (`grep` is just our starter example)_
+
+---
+
+### File Preview
+
+```shell
+head
+```
+
+Using the `head` command on a file will give you only the first few lines of the file. This can be helpful if you need to see a header, license, or just to check the structure of a document.
+
+---
+
+### Line Numbers
+
+```shell
+-n
+```
+
+If you want to see your output numbered by line, you can use the `-n` flag. Any command that gives output can be used with the `-n` flag. Here's an example using `cat` on our `names-list.txt` file.
+
+![Screen Shot of file output but with a numbered list on the left-hand side of the results](https://i.imgur.com/Z7fRj59.png)
 
 ---
 
