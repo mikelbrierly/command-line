@@ -177,24 +177,6 @@
 
 </details>
 
-<details>
-  <summary>Hint 2</summary>
-  
-  Look at the `-A` option you can add to `grep`. It allows you to show a certain number of lines from the file after each "match" in your search. 
-  
-  _You could also use `-B` (lines before), or `-C` (lines before and after)_
-
-</details>
-
-<details>
-  <summary>Answer</summary>
-
-
-  ```shell
-  cat armor-info | grep 113 -A 6
-  ```
-</details>
-
 ---
 
 <h3>I have you now</h3>

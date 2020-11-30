@@ -100,7 +100,7 @@ Make sure you put a space between `cd` and `..` or the terminal will yell at you
 
 Now that took us back to the home directory `~`, right where we were before. (if you want to jump to the home directory from any location, just type `cd` by itself). 
 
-Now let's make a file of our own! Type `touch jedi-scum.txt`.
+Now let's make a file of our own! Type `touch luke-skywalker.txt`.
 
 ```shell
 touch luke-skywalker.txt
@@ -108,7 +108,7 @@ touch luke-skywalker.txt
 
 > `touch` is a command used to create files! You have a lot of power with `touch`, because you can add any extension you like to files you create, such power!
 
-_When you are creating your file, make sure that your filename has no spaces in it, as the command line will interpret "luke" and "skywalker" as two separate commands if there is a space._
+_When you are creating your file, make sure that your filename has no spaces in it, as the command line will interpret "luke" and "skywalker" as two separate files to create if there is a space_
 
 ---
 
@@ -218,7 +218,10 @@ pwd
 
 `pwd` allows you to check where you are currently located in your system.
 
-It stands for "print working directory", and it shows you where you currently are. It will print out the `path` of where you are all the way back to the _base_ directory (`/`).
+It stands for "print working directory", and it shows you where you currently are. It will print out the `path` of where you are all the way back to the _root_ directory (`/`).
+
+> `~` = _home directory_
+> `/` = _root directory_
 
 ---
 
@@ -290,7 +293,7 @@ See our highlighted result? But it __also__ gave us 2 lines above and below when
 > `-B` gives lines before match
 > `-A` gives lines after match
 
-_Remember that `|` can be used with __anything__ that gives output. (`grep` is just our starter example)_
+_Remember that `|` can be used with __anything__ that gives output. (`grep` is just an example)_
 
 ---
 
@@ -384,10 +387,20 @@ To __exit__ the man page, hit `q`.
 
 ![Darth Vader cutting down rebels with his lightsaber in the hallway of a rebel ship.](https://thumbs.gfycat.com/InsidiousRecentFlies-small.gif)
 
-* `clone` this repo down to your local machine.
-* Navigate to the newly cloned `directory` using the terminal.
+* Download this repo down to your local machine.
+  * Click the green `code` button at the top of this page
+  ![Screen Shot of button saying "Code" from GitHub.](https://i.imgur.com/5iEoUgp.png)
+  * In the dropdown menu that appears, click "Download ZIP", and save the file on your computer. (Somewhere you can conveniently access it.)
+  ![Screen Shot of button saying "Download Zip"](https://i.imgur.com/wAcWmrB.png)
+* Use the terminal to navigate to the newly cloned `directory`.
+  * The name of the folder will be `command-line-master`. `master` just means what _branch_ of the code you have.
+  ![Screen Shot 2020-11-30 at 8.42.15 AM](https://i.imgur.com/yjlXIej.png)
 * `cd` into the `rebel-traitor-hunt` directory 
 * Use the `cat` command to read the contents of the file `instructions-from-vader` to get started!
+
+##### Tips:
+* Keep this webpage open for referencing commands you'll need, and for brushing up on the lesson as you go along.
+* For extra help, [open up the walkthrough file](https://github.com/mikelbrierly/command-line/blob/master/WALKTHROUGH.md). It has detailed hints, and the commands to run if you still need that extra push.
 
 ---
 
