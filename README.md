@@ -394,7 +394,7 @@ To __exit__ the man page, hit `q`.
   * In the dropdown menu that appears, click "Download ZIP", and save the file on your computer. (Somewhere you can conveniently access it.)
 
     ![Screen Shot of button saying "Download Zip"](https://i.imgur.com/wAcWmrB.png)
-* Use the terminal to navigate to the newly cloned `directory`.
+* Use the terminal to navigate to the newly downloaded `directory`.
   * The name of the folder will be `command-line-master`. `master` just means what _branch_ of the code you have.
 
     ![Screen Shot 2020-11-30 at 8.42.15 AM](https://i.imgur.com/yjlXIej.png)
