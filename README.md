@@ -387,14 +387,17 @@ To __exit__ the man page, hit `q`.
 
 ![Darth Vader cutting down rebels with his lightsaber in the hallway of a rebel ship.](https://thumbs.gfycat.com/InsidiousRecentFlies-small.gif)
 
-* Download this repo down to your local machine.
+* Download this repo to your local machine.
   * Click the green `code` button at the top of this page
-  ![Screen Shot of button saying "Code" from GitHub.](https://i.imgur.com/5iEoUgp.png)
+
+    ![Screen Shot of button saying "Code" from GitHub.](https://i.imgur.com/5iEoUgp.png)
   * In the dropdown menu that appears, click "Download ZIP", and save the file on your computer. (Somewhere you can conveniently access it.)
-  ![Screen Shot of button saying "Download Zip"](https://i.imgur.com/wAcWmrB.png)
+
+    ![Screen Shot of button saying "Download Zip"](https://i.imgur.com/wAcWmrB.png)
 * Use the terminal to navigate to the newly cloned `directory`.
   * The name of the folder will be `command-line-master`. `master` just means what _branch_ of the code you have.
-  ![Screen Shot 2020-11-30 at 8.42.15 AM](https://i.imgur.com/yjlXIej.png)
+
+    ![Screen Shot 2020-11-30 at 8.42.15 AM](https://i.imgur.com/yjlXIej.png)
 * `cd` into the `rebel-traitor-hunt` directory 
 * Use the `cat` command to read the contents of the file `instructions-from-vader` to get started!
 
